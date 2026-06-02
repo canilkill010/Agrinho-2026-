@@ -1,51 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte | Futuro Sustentável</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <title>A Força e Importância do Agronegócio</title>
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --secondary: #81c784;
+            --dark: #333;
+            --light: #f4f6f8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">AGRO<span>FORTE</span></div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sobre">Inovação</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#contato" class="btn-contato">Fale Conosco</a></li>
-            </ul>
-        </nav>
+    <header>
+        <h1>A Importância do Agronegócio</h1>
+        <p>O motor que alimenta o mundo, impulsiona a economia e constrói o futuro do nosso país.</p>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>O Futuro do Campo é <span>Sustentável</span></h1>
-            <p>Unindo a força da terra com a inteligência da tecnologia para alimentar as próximas gerações.</p>
-            <a href="#sobre" class="cta-button">Conheça Nossas Soluções</a>
-        </div>
-    </section>
-
-    <section id="sobre" class="features">
-        <div class="feature-card">
-            <h3>Monitoramento Real-time</h3>
-            <p>Dados precisos via satélite para otimizar cada semente plantada.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Energia Limpa</h3>
-            <p>Implementação de matrizes solares e eólicas para uma produção autossuficiente.</p>
-        </div>
-        <div class="feature-card">
-            <h3>Resíduo Zero</h3>
-            <p>Logística reversa e compostagem industrial de alta eficiência.</p>
-        </div>
-    </section>
+    <div class="container">
+        <section>
+            <h2>Pilares do Agronegócio</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🌾 Segurança Alimentar</h3>
+                    <p>O agronegócio é responsável por produzir os alimentos que chegam diariamente à mesa de bilhões de pessoas, garantindo comida de qualidade e combatendo a fome global.</p>
+                </div>
+                <div class="card">
+                    <h3>💰 Economia e Emprego</h3>
+                    <p>É um dos maiores motores econômicos. Gera milhões de empregos diretos e indiretos, desde o campo até as indústrias, além de ser fundamental para as exportações.</p>
+                </div>
+                <div class="card">
+                    <h3>🔬 Tecnologia e Inovação</h3>
+                    <p>O campo está cada vez mais tecnológico. O uso de drones, biotecnologia e agricultura de precisão permite produzir mais com menos impacto ambiental.</p>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 AgroForte - Tecnologia a serviço da vida.</p>
+        <p>&copy; 2026 Importância do Agronegócio. Todos os direitos reservados.</p>
     </footer>
 
 </body>
