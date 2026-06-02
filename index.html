@@ -3,105 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Importância do Agronegócio | Sustentabilidade e Futuro</title>
+    <title>AGROFUTURO | A Força que Alimenta o Mundo</title>
+    <!-- Ícones FontAwesome para um visual moderno -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <style>
         :root {
-            --primary: #2c7c34;
-            --secondary: #85bb65;
-            --dark: #1a331e;
-            --light: #f4f7f4;
-            --text: #333333;
+            --primary: #1e5631;
+            --primary-light: #4c9a2a;
+            --accent: #d4af37;
+            --dark: #112211;
+            --light: #f7f9f6;
+            --white: #ffffff;
+            --text: #444444;
+            --transition: all 0.3s ease;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             color: var(--text);
-            line-height: 1.6;
+            background-color: var(--white);
+            line-height: 1.7;
         }
 
+        /* Menu de Navegação */
+        nav {
+            background-color: rgba(17, 34, 17, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary-light);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ccddcc;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Hero Header */
         header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 80vh;
+            background: linear-gradient(to bottom, rgba(17,34,17,0.7), rgba(17,34,17,0.85)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: var(--white);
             padding: 0 20px;
+            padding-top: 80px;
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        header h1 span {
+            background: linear-gradient(to right, #a3e635, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 30px;
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin-bottom: 40px;
+            color: #e2e8f0;
         }
 
         .cta-btn {
-            background-color: var(--primary);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
+            background-color: var(--primary-light);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(76, 154, 42, 0.4);
+            transition: var(--transition);
         }
 
         .cta-btn:hover {
-            background-color: var(--secondary);
-            color: var(--dark);
+            background-color: var(--white);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
         }
 
+        /* Seções Gerais */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 100px 20px;
         }
 
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px auto;
+        }
+
+        .section-tag {
+            color: var(--primary-light);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+
+        /* Cards em Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .card {
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--primary);
-            transition: transform 0.3s;
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--primary-light));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
         }
 
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 25px;
+            display: inline-block;
         }
 
         .card h3 {
+            font-size: 1.4rem;
             margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
             color: var(--dark);
-            margin-bottom: 20px;
         }
 
+        /* Seção Estatísticas (Destaque) */
+        .bg-dark-section {
+            background-color: var(--dark);
+            color: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h2 {
+            font-size: 3.5rem;
+            color: var(--accent);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: #a3b8a3;
+            font-size: 1rem;
+        }
+
+        /* Seção Flex Lado a Lado */
         .bg-light {
             background-color: var(--light);
         }
@@ -109,81 +255,123 @@
         .flex-container {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 60px;
             flex-wrap: wrap;
         }
 
         .flex-col {
             flex: 1;
-            min-width: 300px;
+            min-width: 350px;
+        }
+
+        .image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
         .flex-col img {
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: block;
+            transition: transform 0.5s ease;
         }
 
-        footer {
-            background-color: var(--dark);
-            color: white;
+        .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Seção Newsletter Contact */
+        .newsletter-box {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            border-radius: 16px;
+            padding: 60px 40px;
             text-align: center;
-            padding: 30px 20px;
+            color: var(--white);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
-        @media(max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
+        .newsletter-box h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .newsletter-box p {
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .form-group {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        .form-group input {
+            flex: 1;
+            padding: 15px 20px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .form-group button {
+            background-color: var(--accent);
+            color: var(--dark);
+            border: none;
+            padding: 0 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-group button:hover {
+            background-color: var(--white);
+            transform: scale(1.05);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0b150b;
+            color: #889988;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a2e1a;
+        }
+
+        /* Responsividade */
+        @media(max-width: 992px) {
+            header h1 { font-size: 3rem; }
             .flex-container { flex-direction: column-reverse; }
+            .nav-links { display: none; } /* Em um projeto real, aqui entraria um menu sanduíche */
+        }
+
+        @media(max-width: 576px) {
+            header h1 { font-size: 2.2rem; }
+            .form-group { flex-direction: column; }
+            .form-group button { padding: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>O Motor do Futuro</h1>
-        <p>O agronegócio vai muito além do campo. É ele que garante a nossa alimentação, preserva o meio ambiente e impulsiona a inovação tecnológica no Brasil e no mundo.</p>
-        <a href="#importancia" class="cta-btn">Saiba Mais</a>
-    </header>
-
-    <section id="importancia" class="container">
-        <h2 class="section-title">Por que o Agronegócio é Vital?</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto;">O setor agropecuário é essencial para a manutenção da sociedade, atuando em pilares fundamentais que sustentam a vida moderna.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <h3>🍽️ Segurança Alimentar</h3>
-                <p>O agro é responsável por produzir os alimentos que chegam diariamente à mesa de bilhões de pessoas, garantindo qualidade e variedade nutricional.</p>
-            </div>
-            <div class="card">
-                <h3> اقتصاد Economia e Emprego</h3>
-                <p>É uma das forças motrizes da economia, gerando milhões de empregos diretos e indiretos, desde o cultivo até a exportação e agroindústria.</p>
-            </div>
-            <div class="card">
-                <h3>🌱 Sustentabilidade</h3>
-                <p>A agricultura moderna alia alta produtividade à preservação. Práticas como plantio direto e rotação de culturas protegem o solo e os recursos hídricos.</p>
-            </div>
-            <div class="card">
-                <h3>⚙️ Tecnologia e Inovação</h3>
-                <p>Drones, biotecnologia, agricultura de precisão e inteligência artificial tornaram o campo altamente eficiente e sustentável.</p>
-            </div>
+    <!-- Navegação -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">AGRO<span>FUTURO</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#impacto">Impacto Global</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section class="bg-light">
-        <div class="container flex-container">
-            <div class="flex-col">
-                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">O Papel do Brasil no Mundo</h2>
-                <p>O agronegócio brasileiro é reconhecido globalmente. Somos um dos maiores produtores e exportadores de alimentos, desempenhando um papel estratégico fundamental no combate à fome global. Utilizando menos de 10% do nosso território para a lavoura, o Brasil consegue ser o celeiro do mundo, unindo tradição e tecnologia.</p>
-            </div>
-            <div class="flex-col">
-                <img src="https://unsplash.com" alt="Tecnologia no agronegócio">
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Importância do Agro. Todos os direitos reservados. Promovendo o conhecimento e a valorização do campo.</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Hero Section -->
+    <header id="inicio">
