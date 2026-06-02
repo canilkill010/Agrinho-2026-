@@ -3,115 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Força e Importância do Agronegócio</title>
+    <title>A Importância do Agronegócio | Sustentabilidade e Futuro</title>
     <style>
         :root {
-            --primary: #2e7d32;
-            --secondary: #81c784;
-            --dark: #333;
-            --light: #f4f6f8;
+            --primary: #2c7c34;
+            --secondary: #85bb65;
+            --dark: #1a331e;
+            --light: #f4f7f4;
+            --text: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--dark);
+            color: var(--text);
             line-height: 1.6;
         }
 
         header {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://unsplash.com') no-repeat center center/cover;
-            color: white;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 100px 20px;
+            color: white;
+            padding: 0 20px;
         }
 
         header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
         }
 
         header p {
             font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .cta-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary);
+            color: var(--dark);
         }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
-        h2 {
-            text-align: center;
-            color: var(--primary);
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-        }
-
-        .cards {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            background: var(--light);
+            background: white;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary);
+            transition: transform 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
         }
 
         .card h3 {
+            margin-bottom: 15px;
             color: var(--primary);
-            margin-top: 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .bg-light {
+            background-color: var(--light);
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .flex-col {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .flex-col img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
         footer {
             background-color: var(--dark);
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 30px 20px;
+        }
+
+        @media(max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .flex-container { flex-direction: column-reverse; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>A Importância do Agronegócio</h1>
-        <p>O motor que alimenta o mundo, impulsiona a economia e constrói o futuro do nosso país.</p>
+        <h1>O Motor do Futuro</h1>
+        <p>O agronegócio vai muito além do campo. É ele que garante a nossa alimentação, preserva o meio ambiente e impulsiona a inovação tecnológica no Brasil e no mundo.</p>
+        <a href="#importancia" class="cta-btn">Saiba Mais</a>
     </header>
 
-    <div class="container">
-        <section>
-            <h2>Pilares do Agronegócio</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>🌾 Segurança Alimentar</h3>
-                    <p>O agronegócio é responsável por produzir os alimentos que chegam diariamente à mesa de bilhões de pessoas, garantindo comida de qualidade e combatendo a fome global.</p>
-                </div>
-                <div class="card">
-                    <h3>💰 Economia e Emprego</h3>
-                    <p>É um dos maiores motores econômicos. Gera milhões de empregos diretos e indiretos, desde o campo até as indústrias, além de ser fundamental para as exportações.</p>
-                </div>
-                <div class="card">
-                    <h3>🔬 Tecnologia e Inovação</h3>
-                    <p>O campo está cada vez mais tecnológico. O uso de drones, biotecnologia e agricultura de precisão permite produzir mais com menos impacto ambiental.</p>
-                </div>
+    <section id="importancia" class="container">
+        <h2 class="section-title">Por que o Agronegócio é Vital?</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">O setor agropecuário é essencial para a manutenção da sociedade, atuando em pilares fundamentais que sustentam a vida moderna.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>🍽️ Segurança Alimentar</h3>
+                <p>O agro é responsável por produzir os alimentos que chegam diariamente à mesa de bilhões de pessoas, garantindo qualidade e variedade nutricional.</p>
             </div>
-        </section>
-    </div>
+            <div class="card">
+                <h3> اقتصاد Economia e Emprego</h3>
+                <p>É uma das forças motrizes da economia, gerando milhões de empregos diretos e indiretos, desde o cultivo até a exportação e agroindústria.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Sustentabilidade</h3>
+                <p>A agricultura moderna alia alta produtividade à preservação. Práticas como plantio direto e rotação de culturas protegem o solo e os recursos hídricos.</p>
+            </div>
+            <div class="card">
+                <h3>⚙️ Tecnologia e Inovação</h3>
+                <p>Drones, biotecnologia, agricultura de precisão e inteligência artificial tornaram o campo altamente eficiente e sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container flex-container">
+            <div class="flex-col">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">O Papel do Brasil no Mundo</h2>
+                <p>O agronegócio brasileiro é reconhecido globalmente. Somos um dos maiores produtores e exportadores de alimentos, desempenhando um papel estratégico fundamental no combate à fome global. Utilizando menos de 10% do nosso território para a lavoura, o Brasil consegue ser o celeiro do mundo, unindo tradição e tecnologia.</p>
+            </div>
+            <div class="flex-col">
+                <img src="https://unsplash.com" alt="Tecnologia no agronegócio">
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Importância do Agronegócio. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Importância do Agro. Todos os direitos reservados. Promovendo o conhecimento e a valorização do campo.</p>
     </footer>
 
 </body>
