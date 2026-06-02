@@ -22,6 +22,243 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Seção Hero (Destaque) */
+        .hero {
+            height: calc(100vh - 80px);
+            background: linear-gradient(rgba(17, 34, 17, 0.6), rgba(17, 34, 17, 0.8)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Seções Gerais */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid de Serviços/Produtos */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-top: 5px solid var(--primary);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        .card h3 {
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        /* Formulário de Contato */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--dark);
+            color: #ccddcc;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Em produção, adicione um menu hambúrguer aqui */
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">AGRO<span>FUTURO</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Inovação e Tecnologia no Campo</h1>
+            <p>Aumente a produtividade da sua lavoura com soluções sustentáveis e inteligência analítica de ponta.</p>
+            <a href="#solucoes" class="btn">Conhecer Soluções</a>
+        </div>
+    </section>
+
+    <!-- Seção Quem Somos -->
+    <section id="sobre">
+        <div class="section-container">
+            <h2 class="section-title">Quem Somos</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                A AGROFUTURO nasceu com o propósito de conectar a tradição do manejo agrícola à revolução tecnológica. Oferecemos ferramentas digitais e consultoria especializada para transformar dados da terra em safras recordes, respeitando sempre o meio ambiente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Seção Soluções -->
+    <section id="solucoes" style="background-color: #fafafa;">
+        <div class="section-container">
+            <h2 class="section-title">Nossas Soluções</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Monitoramento via Satélite</h3>
+                    <p>Acompanhe o desenvolvimento da sua cultura em tempo real e identifique pragas antes que elas se espalhem.</p>
+                </div>
+                <div class="card">
+                    <h3>Gestão de Insumos</h3>
+                    <p>Otimize a aplicação de fertilizantes e defensivos com taxas variáveis baseadas em mapas de solo.</p>
+                </div>
+                <div class="card">
+                    <h3>Previsão Climática</h3>
+                    <p>Modelos meteorológicos hiperlocais para planejar a janela ideal de plantio e colheita com segurança.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <div class="section-container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" required placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" required placeholder="seu.email@empresa.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" rows="5" required placeholder="Como podemos ajudar o seu negócio?"></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="section-container">
+            <p>&copy; 2026 AGROFUTURO. Todos os direitos reservados.</p>
+            <p style="font-size: 0.8rem; margin-top: 5px; color: #889988;">Transformando o futuro do agronegócio.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
         html {
             scroll-behavior: smooth;
